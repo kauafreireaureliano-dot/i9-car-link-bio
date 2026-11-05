@@ -14,29 +14,22 @@
     header{text-align:center;padding:12px 8px 22px}
     .logo{display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
     .logo img{display:block;width:min(190px,62%);height:auto;max-height:150px;object-fit:contain}
-    .avatar{width:76px;height:76px;border-radius:50%;overflow:hidden;margin:0 auto 10px;border:2px solid var(--orange);background:#343434}
+    .section-label{font-size:17px;letter-spacing:2.4px;text-transform:uppercase;color:var(--orange);font-weight:900;margin:18px 4px 13px;text-align:center}
+    .consultants{display:flex;flex-direction:column;gap:12px}
+    .consultant-card{display:flex;align-items:center;gap:15px;width:100%;min-height:104px;padding:14px 17px;background:linear-gradient(110deg,#292929,#181818);border:1px solid #414141;border-left:4px solid var(--orange);border-radius:15px;text-decoration:none;color:var(--white);text-align:left;transition:transform .15s,border-color .15s,filter .15s}
+    .consultant-card:hover{transform:translateY(-2px);border-color:var(--orange);filter:brightness(1.08)}
+    .avatar{flex:0 0 68px;width:68px;height:68px;border-radius:50%;overflow:hidden;border:2px solid var(--orange);background:#343434}
     .avatar img{width:100%;height:100%;display:block;object-fit:cover;object-position:center}
-    h1{font-size:23px;line-height:1.2;margin:0 0 8px;font-weight:900;letter-spacing:.2px}
-    .intro{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
-    .section-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);font-weight:800;margin:20px 4px 10px}
-    .consultants{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-    .consultant{background:linear-gradient(145deg,#252525,#181818);border:1px solid #383838;border-radius:15px;padding:15px 10px;text-align:center}
-    .avatar{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;margin:0 auto 9px;background:#343434;border:2px solid var(--orange);font-size:15px;font-weight:900}
-    .consultant strong{display:block;font-size:15px;margin-bottom:4px}
-    .consultant small{display:block;color:var(--muted);font-size:11px;margin-bottom:12px}
-    a.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:49px;padding:13px 14px;border-radius:12px;text-decoration:none;font-weight:800;font-size:14px;transition:transform .15s,filter .15s}
+    .consultant-info{display:flex;flex:1;flex-direction:column;gap:5px;min-width:0}
+    .consultant-info strong{font-size:18px;line-height:1.1}
+    .consultant-info small{color:var(--muted);font-size:12px}
+    .consultant-hint{font-size:12px;font-weight:800;color:var(--orange);margin-top:3px}
+    .card-arrow{font-size:25px;color:var(--orange);font-weight:700;padding-left:4px}
+    a.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:54px;padding:14px;border-radius:12px;text-decoration:none;font-weight:900;font-size:16px;transition:transform .15s,filter .15s}
     a.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
-    .whats{background:var(--orange);color:#111}
-    .catalog{margin-top:12px;background:#f5f5f5;color:#111}
+    .catalog{margin-top:14px;background:#f5f5f5;color:#111;font-size:17px;letter-spacing:.5px}
     .catalog span{color:var(--orange)}
-    .faq{background:var(--panel);border:1px solid #333;border-radius:14px;overflow:hidden}
-    details{padding:0 15px;border-bottom:1px solid #353535}
-    details:last-child{border-bottom:0}
-    summary{list-style:none;cursor:pointer;padding:15px 22px 15px 0;font-size:13px;font-weight:800;position:relative}
-    summary::-webkit-details-marker{display:none}
-    summary:after{content:'+';position:absolute;right:0;color:var(--orange);font-size:20px;top:10px}
-    details[open] summary:after{content:'−'}
-    details p{margin:0 0 15px;color:var(--muted);font-size:12px;line-height:1.6}
+    @media(max-width:360px){.section-label{font-size:16px}.consultant-card{gap:11px;padding:12px}.avatar{flex-basis:58px;width:58px;height:58px}.consultant-info strong{font-size:16px}.consultant-hint{font-size:11px}}
     .bottom{margin-top:20px}
     .bottom .btn{background:var(--orange);color:#111;min-height:54px;font-size:15px}
     footer{text-align:center;color:#777;font-size:11px;margin-top:22px;line-height:1.6}
@@ -48,51 +41,23 @@
   <main class="wrap">
     <header>
       <div class="logo"><img src="https://i.imgur.com/mEMpI7v.png" alt="i9 Car Multimarcas"></div>
-      <h1>SEJA BEM-VINDO À i9 CAR!</h1>
-      <p class="intro">Seu próximo carro pode estar aqui.<br>Escolha um consultor e fale com a gente.</p>
     </header>
 
     <div class="section-label">Nossos consultores</div>
     <section class="consultants" aria-label="Fale com nossos consultores">
-      <article class="consultant">
+      <a class="consultant-card" href="https://wa.me/558791732345?text=Ol%C3%A1%2C%20vim%20do%20Instagram%20e%20queria%20saber%20mais" target="_blank" rel="noopener" aria-label="Falar com Arison pelo WhatsApp">
         <div class="avatar"><img src="https://i.imgur.com/Xa6K21Y.png" alt="Foto de Arison"></div>
-        <strong>Arison</strong>
-        <small>Consultor de vendas</small>
-        <a class="btn whats" href="https://wa.me/558791732345?text=Ol%C3%A1%2C%20vim%20do%20Instagram%20e%20queria%20saber%20mais" target="_blank" rel="noopener">WhatsApp Arison</a>
-      </article>
-      <article class="consultant">
+        <span class="consultant-info"><strong>Arison</strong><small>Consultor de vendas</small><span class="consultant-hint">Falar pelo WhatsApp</span></span>
+        <span class="card-arrow" aria-hidden="true">›</span>
+      </a>
+      <a class="consultant-card" href="https://wa.me/5587991967122?text=Ol%C3%A1%2C%20vim%20do%20Instagram%20e%20queria%20saber%20mais" target="_blank" rel="noopener" aria-label="Falar com Kauã pelo WhatsApp">
         <div class="avatar"><img src="https://i.imgur.com/mi5PBMi.png" alt="Foto de Kauã"></div>
-        <strong>Kauã</strong>
-        <small>Consultor de vendas</small>
-        <a class="btn whats" href="https://wa.me/5587991967122?text=Ol%C3%A1%2C%20vim%20do%20Instagram%20e%20queria%20saber%20mais" target="_blank" rel="noopener">WhatsApp Kauã</a>
-      </article>
+        <span class="consultant-info"><strong>Kauã</strong><small>Consultor de vendas</small><span class="consultant-hint">Falar pelo WhatsApp</span></span>
+        <span class="card-arrow" aria-hidden="true">›</span>
+      </a>
     </section>
 
-    <a class="btn catalog" href="https://wa.me/558791732345?text=Ol%C3%A1%2C%20vim%20do%20Instagram%20e%20gostaria%20de%20receber%20o%20cat%C3%A1logo%20de%20ve%C3%ADculos" target="_blank" rel="noopener"><span>▣</span> NOSSO CATÁLOGO</a>
-
-    <div class="section-label">Dúvidas frequentes</div>
-    <section class="faq">
-      <details>
-        <summary>Posso financiar meu próximo veículo?</summary>
-        <p>Sim! Trabalhamos com opções de financiamento. As condições, entrada e aprovação dependem da análise de crédito feita pela instituição financeira.</p>
-      </details>
-      <details>
-        <summary>A i9 Car aceita meu usado na troca?</summary>
-        <p>Sim, seu veículo pode entrar como parte do pagamento. A avaliação considera estado de conservação, documentação, quilometragem e valor de mercado.</p>
-      </details>
-      <details>
-        <summary>Posso fazer um test drive?</summary>
-        <p>Claro! Fale com um consultor para confirmar a disponibilidade do veículo e combinar o melhor horário.</p>
-      </details>
-      <details>
-        <summary>Os veículos têm procedência?</summary>
-        <p>Você pode solicitar informações sobre histórico, documentação e avaliação do veículo diretamente ao consultor antes de fechar negócio.</p>
-      </details>
-      <details>
-        <summary>Como confirmo se um veículo ainda está disponível?</summary>
-        <p>Chame um de nossos consultores pelo WhatsApp. A disponibilidade pode mudar a qualquer momento.</p>
-      </details>
-    </section>
+    <a class="btn catalog" href="https://wa.me/558791732345?text=Ol%C3%A1%2C%20vim%20do%20Instagram%20e%20quero%20ver%20os%20ve%C3%ADculos%20dispon%C3%ADveis" target="_blank" rel="noopener"><span>▣</span> DISPONÍVEIS ✅</a>
 
     <div class="bottom">
       <a class="btn" href="https://wa.me/558791732345?text=Ol%C3%A1%2C%20vim%20do%20Instagram%20e%20queria%20saber%20mais" target="_blank" rel="noopener">FALAR COM UM CONSULTOR <span>→</span></a>
